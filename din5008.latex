@@ -478,7 +478,7 @@ $endfor$
 
 \usepackage{xcolor}
 \definecolor{custom_color}{RGB}{47,138,71} 
-$if(backadress)$\addtokomafont{backaddress}{\color{custom_color}}$endif$
+\addtokomafont{backaddress}{\color{custom_color}}
 $if(lettersubject)$\addtokomafont{lettersubject}{\color{custom_color}}$endif$
 $if(fromrule)$\addtokomafont{fromrule}{\color{custom_color}}$endif$
 $if(fromaddress)$\addtokomafont{fromaddress}{\color{custom_color}}$endif$
