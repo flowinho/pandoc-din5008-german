@@ -5,18 +5,20 @@ fromaddress: |
   Absender Straße 42  
   1337 Absenderstadt
 place: Absenderstadt
-fromemail: mail@absender.de
-fromurl: absender.de
+#fromemail: mail@absender.de	# It is generally not advised to set these, as it clutters the letterhead.
+#fromurl: absender.de			# It is generally not advised to set these, as it clutters the letterhead.
 to: |
   Musterfirma GmbH  
   Max Mustermann  
   Musterstraße 2  
   12345 Musterstadt
 date: \today{}
-subject: Musterbrief
-signature: Absender Name
-opening: "Guten Tag GitHub,"
-closing: "Danke fürs Testen."
+yourref: "yourref123"
+yourmail: "01.01.2001"
+subject: "Beispielhafter Brief zur Preview des DIN 5008-Template"
+signature: Flowinho
+opening: "Guten Tag liebe Entwickler:innen,"
+closing: "Ich hoffe dieses Template ist euch eine gute Grundlage,"
 lang: de-DE
 firstfoot: "username@emailprovider.com | abcd efgh ijkl mnop qrstu vwxy | absender.de"
 ---

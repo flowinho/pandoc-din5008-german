@@ -479,6 +479,8 @@ $endfor$
 \usepackage{xcolor}
 \definecolor{custom_color}{RGB}{47,138,71} 
 \addtokomafont{backaddress}{\color{custom_color}}
+
+
 $if(lettersubject)$\addtokomafont{lettersubject}{\color{custom_color}}$endif$
 $if(fromrule)$\addtokomafont{fromrule}{\color{custom_color}}$endif$
 $if(fromaddress)$\addtokomafont{fromaddress}{\color{custom_color}}$endif$
@@ -487,12 +489,13 @@ $if(subject)$\addtokomafont{subject}{\color{custom_color}}$endif$
 
 
 
+
 $if(addresseeimage)$\setkomavar{addresseeimage}{$addresseeimage$}$endif$
 $if(backaddress)$\setkomavar{backaddress}{$backaddress$}\KOMAoptions{backaddress=true}$endif$
-$if(backaddressseparator)$\setkomavar{backaddressseparator}{$backaddressseparator$}$endif$
+$if(backaddressseparator)$\setkomavar{\color{custom_color}backaddressseparator}{$backaddressseparator$}$endif$
 $if(ccseparator)$\setkomavar{ccseparator}{$ccseparator$}$endif$
 $if(customer)$\setkomavar{customer}{$customer$}$endif$
-$if(date)$\setkomavar{date}{$date$}$endif$
+$if(date)$\setkomavar{date}{\textsf{$date$}}$endif$
 $if(emailseparator)$\setkomavar{emailseparator}{$emailseparator$}$endif$
 $if(enclseparator)$\setkomavar{enclseparator}{$enclseparator$}$endif$
 $if(faxseparator)$\setkomavar{faxseparator}{$faxseparator$}$endif$
@@ -514,7 +517,7 @@ $if(myref)$\setkomavar{myref}{$myref$}$endif$
 $if(nextfoot)$\setkomavar{nextfoot}{$nextfoot$}$endif$
 $if(nexthead)$\setkomavar{nexthead}{$nexthead$}$endif$
 $if(phoneseparator)$\setkomavar{phoneseparator}{$phoneseparator$}$endif$
-$if(place)$\setkomavar{place}{\color{custom_color}$place$}$endif$
+$if(place)$\setkomavar{place}{\color{custom_color}\textsf{$place$}}$endif$
 $if(placeseparator)$\setkomavar{placeseparator}{$placeseparator$}$endif$
 $if(PPdatamatrix)$\setkomavar{PPdatamatrix}{$PPdatamatrix$}$endif$
 $if(PPcode)$\setkomavar{PPcode}{$PPcode$}$endif$
@@ -525,8 +528,8 @@ $if(subjectseparator)$\setkomavar{placeseparator}{$placeseparator$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
 $if(toaddress)$\setkomavar{toaddress}{$toaddress$}\KOMAoptions{toaddress=true}$endif$
 $if(toname)$\setkomavar{toname}{$toname$}\KOMAoptions{toname=true}$endif$
-$if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
-$if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
+$if(yourmail)$\setkomavar{yourmail}{\textsf{$yourmail$}}$endif$
+$if(yourref)$\setkomavar{yourref}{\textsf{$yourref$}}$endif$
 $if(zipcodeseparator)$\setkomavar{zipcodeseparator}{$zipcodeseparator$}$endif$
 $if(enclseparator)$\setkomavar{enclseparator}{$enclseparator$}$endif$
 $if(fromalign)$\KOMAoptions{fromalign=$fromalign$}$endif$
