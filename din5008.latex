@@ -2,7 +2,7 @@
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 $if(colorlinks)$
-\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names,table}{xcolor}
 $endif$
 $if(CJKmainfont)$
 \PassOptionsToPackage{space}{xeCJK}
@@ -220,7 +220,7 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 $if(geometry)$
 $if(beamer)$
 \geometry{$for(geometry)$$geometry$$sep$,$endfor$}
@@ -476,7 +476,7 @@ $endfor$
 
 
 
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \definecolor{custom_color}{RGB}{47,138,71} 
 \addtokomafont{backaddress}{\color{custom_color}}
 
@@ -551,6 +551,17 @@ $if(enclseparator)$\setkomavar*{enclseparator}{$enclseparator$}$endif$
 \SetBgContents{\rule{.8pt}{\paperheight}}
 \SetBgHshift{+9.5cm}
 
+\usepackage{cellspace}
+\usepackage{etoolbox}
+\colorlet{headercolour}{custom_color}
+\colorlet{textcolour}{yellow}
+
+\AtBeginEnvironment{tabular}{\rowcolors{1}{\ifnumequal{\rownum}{1}{custom_color}{white}}{}}%
+\newcolumntype{L}{>{\ifnumequal{\rownum}{1}{\sffamily\bfseries\color{textcolour}}}Sl}
+\newcolumntype{C}{>{\ifnumequal{\rownum}{1}{\sffamily\bfseries\color{textcolour}}}Sc}
+\newcolumntype{R}{>{\ifnumequal{\rownum}{1}{\sffamily\bfseries\color{textcolour}}}Sr}
+\setlength{\cellspacetoplimit}{5pt}
+\setlength{\cellspacebottomlimit}{5pt}
 
 \begin{document}
 $if(has-frontmatter)$

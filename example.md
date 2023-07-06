@@ -38,5 +38,16 @@ Dinge die ich explizit **nicht** hinzugefügt bzw. geändert habe:
 
 - Syntax-Highlight, das hat in einem Brief nun wirklich keinen Platz.
 
+|Tabellüberschrift 1|Tabellenüberschrift 2|Tabellenüberschrift 3
+|:--|:--|:--|
+|Zeile 1 A|Zeile 1 B|Zeile 1 C|
+|Zeile 2 A|Zeile 2 B|Zeile 2 C|
+|Zeile 3 A| Zeile 3 B|Zeile 3 C|
+||
+|Leerzeile|||
+|||Andere Seite|
+
+Und hier geht es mit Text weiter.
+
 [^1]: Durch die Nutzung von Markdown.
 [^2]: https://github.com/benedictdudel/pandoc-letter-din5008
