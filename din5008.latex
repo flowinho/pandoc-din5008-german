@@ -544,6 +544,14 @@ $if(closing)$\setkomavar{closing}{$closing$}$endif$
 $if(enclseparator)$\setkomavar*{enclseparator}{$enclseparator$}$endif$
 % END OVERRIDES
 
+\usepackage{background}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgColor{custom_color}
+\SetBgContents{\rule{.8pt}{\paperheight}}
+\SetBgHshift{+9.5cm}
+
+
 \begin{document}
 $if(has-frontmatter)$
 \frontmatter
