@@ -33,10 +33,14 @@ einzelner Schriftarten und -farben beschränkt.
 Ich habe das Template um folgende Dinge erweitert bzw. geändert:
 
 - Hinzufügen des Tex-Package `xcolor` ermöglicht die Einfärbung mehrerer Elemente des Briefes, in diesem Fall: `fromname`, `fromadress`, `subject`, `place`, `date`, `backadress` und `firstfoot`. Weitere Änderungen können selbstverständlich vorgenommen werden.
+- Die optische Erscheinung von `longtable` weicht nun vom bisherigen Standard ab und erlaubt das Einfärben der Tabellenzeilen.
+- Einführung von _sans-serif_ Schriftarten um relevante Elemente entsprechend hervorzuheben.
 
 Dinge die ich explizit **nicht** hinzugefügt bzw. geändert habe:
 
 - Syntax-Highlight, das hat in einem Brief nun wirklich keinen Platz.
+
+Hier erscheint nun eine beispielhafte Tabelle.
 
 |Tabellüberschrift 1|Tabellenüberschrift 2|Tabellenüberschrift 3
 |:--|:--|:--|
