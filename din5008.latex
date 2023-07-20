@@ -617,6 +617,7 @@ $endif$
 $to$
 }
 \opening{\usekomavar{opening}}
+
 % END OVERRIDES
 $body$
 % OVERRIDES
