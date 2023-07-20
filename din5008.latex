@@ -616,7 +616,7 @@ $endif$
 \begin{letter}{%
 $to$
 }
-\opening{\usekomavar{opening}}
+\opening{\usekomavar{opening}} 
 
 % END OVERRIDES
 $body$
