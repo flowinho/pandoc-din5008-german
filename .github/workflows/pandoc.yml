@@ -3,6 +3,7 @@ name: Advanced Usage
 on: push
 # docker://pandoc/latex:2.9
 # tlmgr install babel-german
+# echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
@@ -12,7 +13,7 @@ jobs:
         id: files_list
         run: |
           mkdir output  # create output dir
-          echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
+          echo "files=$(example.md)" > $GITHUB_OUTPUT
       - uses: docker://pandoc/extra 
         with:
           args: >-  # allows you to break string into multiple lines
