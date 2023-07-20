@@ -613,7 +613,7 @@ $endif$
 %\def\midrule{}
 
 % OVERRIDES
-\begin{letter}{%$to$}
+\begin{letter}{$to$}
 \opening{\usekomavar{opening}} 
 $body$
 \closing{\usekomavar{closing}}
