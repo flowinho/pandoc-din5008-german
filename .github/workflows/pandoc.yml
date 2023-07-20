@@ -1,7 +1,8 @@
 name: Advanced Usage
 
 on: push
-
+# docker://pandoc/latex:2.9
+# tlmgr install babel-german
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
@@ -12,8 +13,7 @@ jobs:
         run: |
           mkdir output  # create output dir
           echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
-          tlmgr install babel-german
-      - uses: docker://pandoc/latex:2.9 
+      - uses: docker://pandoc/extra 
         with:
           args: >-  # allows you to break string into multiple lines
             --template=din5008.latex 
