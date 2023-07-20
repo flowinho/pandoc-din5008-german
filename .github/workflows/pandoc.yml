@@ -11,12 +11,14 @@ jobs:
         id: files_list
         run: |
           mkdir output  # create output dir
-          echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
-      - uses: docker://pandoc/latex:2.9 
+          echo "files=$(example.md)" > $GITHUB_OUTPUT
+      
+      - uses: docker://survivorbat/pandoc-eisvogel:latest
         with:
           args: >-  # allows you to break string into multiple lines
             --template=din5008.latex 
             --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+      
       - uses: actions/upload-artifact@v3
         with:
           name: output
