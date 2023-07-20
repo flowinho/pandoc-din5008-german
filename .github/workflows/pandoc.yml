@@ -12,8 +12,7 @@ jobs:
         run: |
           mkdir output  # create output dir
           echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
-      - uses: docker://danteev/texlive 
-      #uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/latex:2.9 
         with:
           args: >-  # allows you to break string into multiple lines
             --template=din5008.latex 
