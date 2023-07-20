@@ -613,14 +613,9 @@ $endif$
 %\def\midrule{}
 
 % OVERRIDES
-\begin{letter}{%
-$to$
-}
+\begin{letter}{%$to$}
 \opening{\usekomavar{opening}} 
-
-% END OVERRIDES
 $body$
-% OVERRIDES
 \closing{\usekomavar{closing}}
 $if(ps)$\ps{$ps$}$endif$
 $if(encl)$\encl{$encl$}$endif$
