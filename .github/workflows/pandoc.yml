@@ -13,7 +13,7 @@ jobs:
           mkdir output  # create output dir
           echo "files=$(example.md)" > $GITHUB_OUTPUT
       
-      - uses: docker://survivorbat/pandoc-eisvogel:latest
+      - uses: docker://pandoc/latex:latest
         with:
           args: >-  # allows you to break string into multiple lines
             --template=din5008.latex 
