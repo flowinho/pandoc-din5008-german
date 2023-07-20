@@ -12,6 +12,7 @@ jobs:
         run: |
           mkdir output  # create output dir
           echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
+          tlmgr install babel-german
       - uses: docker://pandoc/latex:2.9 
         with:
           args: >-  # allows you to break string into multiple lines
